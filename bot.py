@@ -6,10 +6,6 @@ import random
 from dotenv import load_dotenv
 from discord.ext import commands
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
-
 client = commands.Bot('!')
 
 
@@ -46,4 +42,4 @@ async def poll(ctx):
     await ctx.message.add_reaction(downvote)
 
 
-client.run(TOKEN)
+# client.run(TOKEN)
