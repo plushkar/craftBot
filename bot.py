@@ -42,7 +42,8 @@ async def poll(ctx):
     await ctx.message.add_reaction(downvote)
 
 @client.command()
-async def pizza(ctx)
+async def pizza(ctx):
     await ctx.send("Pizza")
+    
 
 # client.run(TOKEN)
