@@ -12,6 +12,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -44,8 +45,10 @@ async def poll(ctx):
     await ctx.message.add_reaction(upvote)
     await ctx.message.add_reaction(downvote)
 
+
 @client.command()
 async def pizza(ctx):
     await ctx.send("Pizza")
+
 
 client.run(TOKEN)
