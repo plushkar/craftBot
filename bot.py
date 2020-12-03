@@ -8,6 +8,9 @@ from discord.ext import commands
 
 client = commands.Bot('!')
 
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+GUILD = os.getenv('DISCORD_GUILD')
 
 @client.event
 async def on_ready():
@@ -42,7 +45,7 @@ async def poll(ctx):
     await ctx.message.add_reaction(downvote)
 
 @client.command()
-async def pizza(ctx)
+async def pizza(ctx):
     await ctx.send("Pizza")
 
-# client.run(TOKEN)
+client.run(TOKEN)
