@@ -50,5 +50,9 @@ async def poll(ctx):
 async def pizza(ctx):
     await ctx.send("Pizza")
 
+@client.command()
+async def mungSpam(ctx, times):
+    for i in range 0 to times:
+        await ctx.send("@everyone munge??)
 
 client.run(TOKEN)
